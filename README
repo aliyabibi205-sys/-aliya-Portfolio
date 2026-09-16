@@ -1,0 +1,44 @@
+# Aliya Bibi — Portfolio
+
+Personal portfolio website of Aliya Bibi, a BSCS graduate and aspiring IT professional.  
+Showcases projects, skills, experience and contact information.
+
+**Live site:** [https://<username>.github.io/aliya-portfolio/](https://<username>.github.io/aliya-portfolio/)
+
+## Features
+
+- Responsive single-page design (mobile, tablet, desktop)
+- Smooth scrolling navigation
+- Sections: Home, About, Skills, Projects, Experience, Education, Contact
+- Built with HTML, CSS (Bootstrap 5 + custom), and vanilla JavaScript
+- Scroll-based reveal animations
+
+## Tech Stack
+
+- HTML5, CSS3, JavaScript
+- Bootstrap 5 (CDN)
+- Google Fonts (DM Sans, Playfair Display)
+
+## Project Highlight
+
+**IDMUI — Identity Management User Interface for OpenStack Keystone**  
+A Flask-based web interface for managing OpenStack Keystone identities via REST APIs, deployed on Ubuntu using Oracle VirtualBox.
+
+- GitHub: [aliyabibi205-sys/idmui-openstack-project](https://github.com/aliyabibi205-sys/idmui-openstack-project)
+
+## How to run locally
+
+1. Clone or download this repository.
+2. Open `index.html` in a modern browser.
+3. No build step required.
+
+## Author
+
+**Aliya Bibi**  
+- Email: aliyabibi205@gmail.com  
+- LinkedIn: [linkedin.com/in/aliya-bibi-13034b405](https://www.linkedin.com/in/aliya-bibi-13034b405)  
+- GitHub: [github.com/aliyabibi205-sys](https://github.com/aliyabibi205-sys)
+
+## License
+
+This project is open for learning and reference. Feel free to use as inspiration for your own portfolio.
