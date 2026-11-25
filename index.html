@@ -1,56 +1,1204 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Aliya Bibi — BSCS Graduate, AI Enthusiast, Web Developer & AI Video Ad Creator.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta
+    name="description"
+    content="Aliya Bibi — BSCS graduate, AI enthusiast, aspiring AI specialist, and AI-powered video creator."
+  >
+
   <title>Aliya Bibi | Portfolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&family=Amiri:wght@400;700&display=swap"
+    rel="stylesheet"
+  >
+
   <link rel="stylesheet" href="styles.css">
+
   <style>
-    .quran-quote{background:linear-gradient(135deg,#f8f6f0,#fff);border:2px solid #1a2a5e;border-radius:16px;padding:32px 24px;text-align:center;box-shadow:0 8px 32px rgba(26,42,94,.15);margin-bottom:28px}
-    .quran-arabic{font-family:'Amiri',serif;font-size:2rem;line-height:2.2;color:#1a2a5e;font-weight:700;direction:rtl;margin-bottom:16px;background:linear-gradient(90deg,rgba(26,42,94,.08),rgba(26,42,94,.03));padding:16px;border-radius:12px;display:inline-block;width:100%}
-    .quran-translation{font-size:1.05rem;color:#8B5E3C;font-style:italic;margin-bottom:10px;font-weight:500}
-    .quran-ref{font-size:.85rem;color:#1a2a5e;letter-spacing:1.5px;text-transform:uppercase;font-weight:600}
-    .ads-toggle-btn{background:#1a2a5e;color:#fff;border:none;padding:12px 28px;border-radius:50px;font-weight:600;transition:all .3s}
-    .ads-toggle-btn:hover{background:#2a3a6e;transform:translateY(-2px);box-shadow:0 6px 20px rgba(26,42,94,.3)}
-    .video-list-item{background:#fff;border:1px solid #e0e0e0;border-radius:12px;padding:20px;margin-bottom:16px;transition:all .3s}
-    .video-list-item:hover{box-shadow:0 6px 20px rgba(0,0,0,.1);transform:translateY(-2px)}
-    .video-list-item h4{color:#1a2a5e;font-weight:700;margin-bottom:8px}
-    .video-list-item p{color:#555;font-size:.95rem;margin-bottom:12px}
-    .watch-btn{background:#8B5E3C;color:#fff;border:none;padding:8px 20px;border-radius:50px;font-size:.9rem;font-weight:600;text-decoration:none;display:inline-block;transition:all .3s}
-    .watch-btn:hover{background:#a5714a;color:#fff;transform:translateY(-2px)}
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    #home.hero {
+      padding-top: 115px;
+      padding-bottom: 70px;
+      height: auto;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    .quran-quote {
+      position: relative;
+      background: linear-gradient(135deg, #fffdf5, #eef4ff);
+      border: 2px solid #142654;
+      border-radius: 22px;
+      padding: clamp(22px, 4vw, 42px);
+      text-align: center;
+      box-shadow:
+        0 12px 36px rgba(20, 38, 84, 0.15),
+        inset 0 0 0 5px rgba(255, 255, 255, 0.7);
+      margin: 0 0 44px;
+    }
+
+    .quran-arabic {
+      font-family: "Amiri", serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.55rem);
+      line-height: 2.2;
+      color: #102451;
+      font-weight: 700;
+      direction: rtl;
+      background: rgba(20, 38, 84, 0.06);
+      border-radius: 14px;
+      padding: 20px 14px;
+      margin-bottom: 20px;
+      text-shadow: 0 2px 8px rgba(20, 38, 84, 0.08);
+    }
+
+    .quran-arabic .ayah {
+      display: inline;
+    }
+
+    .quran-translation {
+      color: #795136;
+      font-size: clamp(0.98rem, 1.5vw, 1.1rem);
+      line-height: 1.85;
+      font-weight: 600;
+      max-width: 850px;
+      margin: 0 auto 15px;
+    }
+
+    .quran-ref {
+      color: #142654;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 1.4px;
+      margin-bottom: 0;
+      text-transform: uppercase;
+    }
+
+    #home .hero-text.hero-specialties {
+      max-width: 900px;
+      font-size: clamp(1rem, 1.6vw, 1.22rem);
+      line-height: 1.95;
+      font-weight: 500;
+    }
+
+    .about-summary {
+      display: grid;
+      gap: 14px;
+    }
+
+    .about-summary p {
+      margin: 0;
+      line-height: 1.85;
+    }
+
+    .about-summary strong {
+      color: #142654;
+      font-weight: 700;
+    }
+
+    .project-media {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: clamp(22px, 4vw, 45px);
+      background: linear-gradient(135deg, #edf3ff, #f8fafc);
+      min-height: 290px;
+    }
+
+    .project-media img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 340px;
+      object-fit: contain;
+      border-radius: 12px;
+    }
+
+    .aitmad-brand-preview {
+      width: 100%;
+      text-align: center;
+      padding: 28px 16px;
+      color: #142654;
+    }
+
+    .aitmad-monogram {
+      width: 110px;
+      height: 110px;
+      margin: 0 auto 20px;
+      display: grid;
+      place-items: center;
+      border-radius: 28px;
+      background: #142654;
+      color: #fff;
+      font-size: 2.6rem;
+      font-weight: 700;
+      box-shadow: 0 12px 25px rgba(20, 38, 84, 0.2);
+    }
+
+    .aitmad-brand-preview h3 {
+      color: #142654;
+      font-size: 1.9rem;
+      margin-bottom: 8px;
+    }
+
+    .aitmad-brand-preview p {
+      color: #536174;
+      margin-bottom: 0;
+    }
+
+    .business-ads-card {
+      background: #fff;
+      border: 1px solid #dfe5ef;
+      border-radius: 20px;
+      padding: clamp(24px, 4vw, 40px);
+      box-shadow: 0 8px 24px rgba(20, 38, 84, 0.05);
+    }
+
+    .business-ads-card h3 {
+      color: #142654;
+    }
+
+    .ads-toggle-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: #142654;
+      color: #fff;
+      border: 2px solid #142654;
+      padding: 12px 28px;
+      border-radius: 50px;
+      font-weight: 700;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .ads-toggle-btn:hover {
+      background: #243d77;
+      transform: translateY(-2px);
+    }
+
+    .ads-toggle-btn .toggle-arrow {
+      display: inline-block;
+      transition: transform 0.2s;
+    }
+
+    .ads-toggle-btn[aria-expanded="true"] .toggle-arrow {
+      transform: rotate(180deg);
+    }
+
+    .video-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 16px;
+    }
+
+    .video-list-item {
+      display: block;
+      background: #f8fafc;
+      border: 1px solid #dfe5ef;
+      border-radius: 14px;
+      padding: 22px;
+      color: #142654;
+      text-decoration: none;
+      transition:
+        border-color 0.2s,
+        box-shadow 0.2s,
+        transform 0.2s;
+    }
+
+    .video-list-item:hover {
+      color: #142654;
+      border-color: #142654;
+      box-shadow: 0 8px 22px rgba(20, 38, 84, 0.1);
+      transform: translateY(-2px);
+    }
+
+    .video-list-item h4 {
+      color: #142654;
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .video-list-item p {
+      color: #536174;
+      font-size: 0.98rem;
+      line-height: 1.75;
+      margin-bottom: 12px;
+    }
+
+    .sample-label {
+      display: inline-block;
+      background: #e9eef8;
+      color: #142654;
+      border-radius: 50px;
+      padding: 5px 11px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      margin-bottom: 12px;
+    }
+
+    .youtube-link-label {
+      display: inline-block;
+      color: #795136;
+      font-weight: 700;
+      font-size: 0.93rem;
+    }
+
+    .experience-subheading {
+      color: #142654;
+      font-size: 1rem;
+      font-weight: 700;
+      margin: 22px 0 10px;
+    }
+
+    .experience-responsibilities {
+      padding-left: 20px;
+      line-height: 1.85;
+    }
+
+    .experience-responsibilities li {
+      margin-bottom: 6px;
+    }
+
+    .project-note {
+      font-size: 0.88rem;
+      color: #64748b;
+      line-height: 1.7;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid #b58b53;
+      outline-offset: 5px;
+    }
+
+    @media (max-width: 767px) {
+      #home.hero {
+        padding-top: 100px;
+        padding-bottom: 50px;
+      }
+
+      .quran-quote {
+        margin-bottom: 30px;
+      }
+
+      .quran-arabic {
+        padding: 16px 10px;
+        line-height: 2.15;
+      }
+
+      .project-media {
+        min-height: 230px;
+      }
+
+      .business-ads-card {
+        padding: 22px 18px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .ads-toggle-btn,
+      .ads-toggle-btn .toggle-arrow,
+      .video-list-item {
+        transition: none;
+      }
+    }
   </style>
+
+  <noscript>
+    <style>
+      .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+        visibility: visible !important;
+      }
+
+      #adsList.collapse {
+        display: block !important;
+      }
+    </style>
+  </noscript>
 </head>
+
 <body>
-<nav class="navbar navbar-expand-lg fixed-top" id="mainNav"><div class="container"><a class="navbar-brand" href="#home">AB<span>.</span></a><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="nav"><ul class="navbar-nav ms-auto"><li class="nav-item"><a class="nav-link" href="#about">About</a></li><li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li><li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li><li class="nav-item"><a class="nav-link" href="#ai-ads">AI Ads</a></li><li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li><li class="nav-item"><a class="nav-link nav-contact" href="#contact">Contact me</a></li></ul></div></div></nav>
-<main>
-<section id="home" class="hero"><div class="orb orb-one"></div><div class="orb orb-two"></div><div class="container position-relative"><div class="row align-items-center min-vh-100"><div class="col-lg-8">
-<div class="quran-quote reveal">
-<p class="quran-arabic">إِنَّ فِي خَلْقِ السَّمَاوَاتِ وَالْأَرْضِ وَاخْتِلَافِ اللَّيْلِ وَالنَّهَارِ لَآيَاتٍ لِّأُولِي الْأَلْبَابِ</p>
-<p class="quran-translation">"Indeed, in the creation of the heavens and the earth and the alternation of the night and the day are signs for those of understanding."</p>
-<p class="quran-ref">Surah Aal-i-Imran · 3:190</p>
-</div>
-<p class="eyebrow reveal">HELLO, I AM</p><h1 class="reveal">Aliya <em>Bibi.</em></h1><p class="hero-text reveal">BSCS graduate and aspiring AI specialist with hands-on experience in Python, Flask, REST APIs, OpenStack Keystone, Ubuntu/Linux, NLP-based AI systems and AI-powered promotional videos.</p><div class="d-flex flex-wrap gap-3 reveal"><a class="btn btn-primary-custom" href="#projects">View my work <span>→</span></a><a class="btn btn-outline-custom" href="mailto:aliyabibi205@gmail.com">Get in touch</a></div></div><div class="col-lg-4 d-none d-lg-block"><div class="hero-card reveal"><p>Currently exploring</p><strong>AI, Cloud,<br>Web Development<br>& AI Video Ads</strong><div class="card-line"></div><small>Based in Gujar Khan, Pakistan</small></div></div></div></div></section>
-<section id="about" class="section"><div class="container"><div class="row g-5 align-items-center"><div class="col-lg-5 reveal"><p class="eyebrow">01 — ABOUT ME</p><h2>A blend of technology, leadership & creativity.</h2></div><div class="col-lg-7 reveal"><p class="lead-copy">I am a Computer Science graduate who enjoys turning technical ideas into practical solutions. My academic project focused on managing OpenStack Keystone identities through a user-friendly web interface. I have also built an AI-based school helpdesk system using NLP to automate student and parent queries.</p><p>In addition to my technical background, I have professional experience in education administration, customer support, and office administration. I am currently working as a Junior Accountant at a Technical Training Institute, where I handle data entry, record management, documentation, and administrative support.</p><p>I also create AI-powered promotional videos and advertisements for businesses. These include product promotions, business introductions, social media ads, AI voiceovers, captions, and call-to-action videos for platforms such as TikTok, Instagram Reels, Facebook, and WhatsApp Status.</p><div class="quick-facts"><div><strong>2025</strong><span>BSCS Graduate</span></div><div><strong>3.07</strong><span>CGPA / 4.00</span></div><div><strong>5+ yrs</strong><span>Professional Experience</span></div></div></div></div></div></section>
-<section id="skills" class="section section-dark"><div class="container"><p class="eyebrow light reveal">02 — SKILLS</p><h2 class="text-white reveal">Tools I work with.</h2><div class="row g-3 mt-3"><div class="col-md-6 col-lg-3 reveal"><div class="skill-card"><div class="skill-num">01</div><h3>Programming</h3><p>Python, C, C++, HTML, CSS</p></div></div><div class="col-md-6 col-lg-3 reveal"><div class="skill-card"><div class="skill-num">02</div><h3>Web & APIs</h3><p>Flask, REST APIs, API Integration, Bootstrap</p></div></div><div class="col-md-6 col-lg-3 reveal"><div class="skill-card"><div class="skill-num">03</div><h3>Systems</h3><p>OpenStack Keystone, Ubuntu/Linux, Oracle VirtualBox</p></div></div><div class="col-md-6 col-lg-3 reveal"><div class="skill-card"><div class="skill-num">04</div><h3>AI & Data</h3><p>NLP, Text Classification, Machine Learning, Chatbot / Conversational AI</p></div></div><div class="col-md-6 col-lg-3 reveal"><div class="skill-card"><div class="skill-num">05</div><h3>AI Video Ads</h3><p>Google Flow, Google AI Studio, CapCut, TikTok, Synthesia, ElevenLabs</p></div></div><div class="col-md-6 col-lg-3 reveal"><div class="skill-card"><div class="skill-num">06</div><h3>Office & Admin</h3><p>MS Office, Excel, Word, PowerPoint, InPage, Data Entry, Record Management</p></div></div><div class="col-md-6 col-lg-3 reveal"><div class="skill-card"><div class="skill-num">07</div><h3>Customer Support</h3><p>Customer Queries, Booking Coordination, Dispatch Support, English Communication</p></div></div><div class="col-md-6 col-lg-3 reveal"><div class="skill-card"><div class="skill-num">08</div><h3>Professional Skills</h3><p>Communication, Team Coordination, Documentation, Problem Solving, Time Management</p></div></div></div></div></section>
-<section id="projects" class="section"><div class="container"><div class="d-flex justify-content-between align-items-end flex-wrap gap-3"><div><p class="eyebrow reveal">03 — PROJECTS</p><h2 class="reveal">Selected work.</h2></div><a class="text-link reveal" href="https://github.com/aliyabibi205-sys/idmui-openstack-project" target="_blank" rel="noopener">View GitHub ↗</a></div><article class="project-card mt-4 reveal"><div class="project-visual"><div class="terminal"><div class="terminal-top"><i></i><i></i><i></i></div><p><span>$</span> openstack identity</p><p class="muted">Managing users, roles & projects</p><div class="terminal-bar"></div><p class="success">✓ Keystone service active</p></div></div><div class="project-content"><span class="project-label">FEATURED PROJECT</span><h3>IDMUI — Identity Management User Interface</h3><p>A Flask-based interface for OpenStack Keystone that helps manage identity and access workflows through a web dashboard rather than complex command-line steps.</p><ul><li>Configured and ran the project on Ubuntu using Oracle VirtualBox</li><li>Worked with Keystone REST APIs for user, role and project management</li><li>Designed for API-based integration with other systems</li></ul><div class="tags"><span>Python</span><span>Flask</span><span>REST API</span><span>OpenStack</span><span>Ubuntu</span></div><a class="btn btn-primary-custom mt-4" href="https://github.com/aliyabibi205-sys/idmui-openstack-project" target="_blank" rel="noopener">Explore repository <span>→</span></a></div></article> <article class="project-card mt-4 reveal">
-<div class="project-content">
-<span class="project-label">WEB PROJECT</span>
-<h3>Aitmad Rides — Ride Booking Website</h3>
-<p>A complete ride-booking website project built as an interactive Claude artifact, including a landing page, service details, booking interface, and promotional content. The project also includes presentation files, video ads, and image ads created using AI tools.</p>
-<ul>
-<li>Designed a responsive multi-page website for a ride-booking service</li>
-<li>Created promotional video and image ads using AI tools (Google Flow, CapCut, Synthesia, ElevenLabs)</li>
-<li>Prepared presentation files to showcase the project concept and features</li>
-</ul>
-<div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>AI Video Ads</span><span>Google Flow</span><span>CapCut</span></div>
-<a class="btn btn-primary-custom mt-4" href="https://claude.ai/artifact/SjpLqGUDiVLsCXakbSaHFS" target="_blank" rel="noopener">View Live Project <span>→</span></a>
-</div>
-</article><article class="project-card mt-4 reveal"><div class="project-content"><span class="project-label">AI PROJECT</span><h3>AI-Based School Helpdesk System</h3><p>An AI-powered helpdesk system to automate student and parent queries for a school, reducing manual workload and improving response time.</p><ul><li>Implemented NLP-based query classification to understand user intent and map questions to relevant answers.</li><li>Built a simple chat interface for instant, consistent responses to FAQs about admissions, fees, timetables and exams.</li><li>Reduced manual support load on school staff by automating repetitive inquiries and routing complex issues.</li></ul><div class="tags"><span>Python</span><span>NLP</span><span>Machine Learning</span><span>Chatbot</span><span>Flask</span></div><a class="btn btn-primary-custom mt-4" href="https://claude.ai/artifact/Ch7V72UZLiukcdgPXtYyXg" target="_blank" rel="noopener">View AI System <span>→</span></a></div></article></div></section>
-<section id="ai-ads" class="section section-tint"><div class="container"><p class="eyebrow reveal">04 — BUSINESS PROMOTIONAL VIDEO ADS</p><h2 class="reveal">AI-powered ads for businesses.</h2><p class="lead-copy mt-3 reveal">I create engaging AI-powered promotional video advertisements for businesses, products, services, and social media campaigns. Using tools such as Google Flow, Google AI Studio, CapCut, TikTok, Synthesia, and ElevenLabs, I produce short, professional ad videos with creative concepts, scripts, AI-generated visuals, voiceovers, captions, and call-to-action messaging. These ads are designed for TikTok, Instagram Reels, Facebook, YouTube Shorts, and WhatsApp Status to help businesses promote their brand and reach more customers.</p><div class="text-center mt-4 reveal"><button class="ads-toggle-btn" type="button" data-bs-toggle="collapse" data-bs-target="#adsList" aria-expanded="false" aria-controls="adsList">View Ads <span>↓</span></button></div><div class="collapse mt-4" id="adsList"><div class="video-list-item reveal"><h4>1. Bakery / Livestock Business Promotional Ad</h4><p>A sample AI-generated promotional advertisement created for a livestock/bakery business. The video highlights the product attractively with engaging visuals, AI voiceover, captions, and a clear call-to-action to encourage customer inquiries.</p><div class="tags"><span>Google Flow</span><span>Google AI Studio</span><span>CapCut</span><span>ElevenLabs</span><span>Social Media Ad</span></div><a class="watch-btn mt-3" href="https://youtube.com/shorts/pNlrHH4RD0k?si=pDhPDIDSiJWahe8M" target="_blank" rel="noopener">Watch on YouTube ↗</a></div><div class="video-list-item reveal"><h4>2. Taxi Service Company Promotional Ad — UK</h4><p>A sample AI-generated promotional advertisement created for a UK-based taxi service company. The video promotes the business with professional visuals, AI voiceover, captions, and a call-to-action designed to attract customers and increase bookings.</p><div class="tags"><span>Google Flow</span><span>Google AI Studio</span><span>CapCut</span><span>Synthesia</span><span>ElevenLabs</span><span>Business Promotion</span></div><a class="watch-btn mt-3" href="https://youtu.be/1RmVFuHKNUQ?si=ObTFviZ6uoCY9r1Q" target="_blank" rel="noopener">Watch on YouTube ↗</a></div></div><div class="text-center mt-5 reveal"><a class="btn btn-primary-custom" href="mailto:aliyabibi205@gmail.com?subject=AI%20Video%20Ad%20Project">Hire me for AI video ads <span>→</span></a></div></div></section>
-<section id="experience" class="section"><div class="container"><p class="eyebrow reveal">05 — EXPERIENCE</p><h2 class="reveal">Professional journey.</h2><div class="timeline mt-4"><div class="timeline-item reveal"><div class="timeline-date">November 2026 — Present</div><div><h3>Junior Accountant</h3><h4>Govt. Technical Training Institute, Gujar Khan </h4><p>Handle data entry, record management, documentation, and administrative support. Use MS Office, Excel, Word, PowerPoint, and InPage to maintain accurate digital records and support daily office operations.</p></div></div><div class="timeline-item reveal"><div class="timeline-date">January 2026 — May 2026</div><div><h3>International Customer Support Agent</h3><h4>Ash Cars, UK — Remote</h4><p>Handled taxi bookings, customer queries, and dispatch coordination in a fast-paced English-speaking customer support environment. Provided timely assistance, maintained clear communication, and supported smooth booking operations.</p></div></div><div class="timeline-item reveal"><div class="timeline-date">2021 — October 2026</div><div><h3>Vice Principal</h3><h4>Millat Secondary School for Girls, Gujar Khan</h4><p>Coordinated academic and administrative activities, maintained student and office records, and supported cash handling, budgeting, and documentation through Excel, Word, and InPage. Led team coordination and strengthened communication, organization, and problem-solving skills.</p></div></div></div></div></section>
-<section class="section section-tint"><div class="container"><div class="row g-4"><div class="col-lg-7 reveal"><p class="eyebrow">06 — EDUCATION & CERTIFICATIONS</p><h2>Always learning.</h2><div class="education-box"><h3>BS Computer Science</h3><p>Virtual University of Pakistan · 2025 · CGPA 3.07 / 4.00</p></div></div><div class="col-lg-5 reveal"><div class="cert-box"><h3>Courses & certificates</h3><ul><li>Cyber Security Threats</li><li>Excel Formulas</li><li>Learn Python</li><li>Full Stack Web Development — DigiPakistan</li> <li>AI For Everyone — NAVTTC</li></ul></div></div></div></div></section>
-<section id="contact" class="contact-section"><div class="container text-center reveal"><p class="eyebrow light">07 — CONTACT</p><h2>Let's build something<br><em>useful</em> together.</h2><p>I am open to IT, software development, technical support, systems operations, AI/ML-related opportunities, and AI video advertisement projects.</p><a class="email-link" href="mailto:aliyabibi205@gmail.com">aliyabibi205@gmail.com</a><div class="socials"><a href="https://www.linkedin.com/in/aliya-bibi-13034b405" target="_blank" rel="noopener">LinkedIn ↗</a><a href="https://github.com/aliyabibi205-sys" target="_blank" rel="noopener">GitHub ↗</a><a href="tel:+923045234864">Call me ↗</a></div></div></section>
-</main><footer><div class="container d-flex justify-content-between flex-wrap gap-2"><span>© 2026 Aliya Bibi</span><span>Designed with intention.</span></div></footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script><script src="script.js"></script></body></html>
+
+  <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="#home">
+        AB<span>.</span>
+      </a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#nav"
+        aria-controls="nav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#ai-ads">AI Ads</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#experience">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-contact" href="#contact">
+              Contact me
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- HOME -->
+    <section id="home" class="hero">
+      <div class="orb orb-one"></div>
+      <div class="orb orb-two"></div>
+
+      <div class="container position-relative">
+
+        <blockquote
+          class="quran-quote"
+          aria-label="Surah Al-Alaq, verses 1 to 5, with English translation"
+        >
+          <div class="quran-arabic" lang="ar" dir="rtl">
+            <span class="ayah">
+              اقْرَأْ بِاسْمِ رَبِّكَ الَّذِي خَلَقَ ﴿١﴾
+            </span>
+            <span class="ayah">
+              خَلَقَ الْإِنْسَانَ مِنْ عَلَقٍ ﴿٢﴾
+            </span>
+            <span class="ayah">
+              اقْرَأْ وَرَبُّكَ الْأَكْرَمُ ﴿٣﴾
+            </span>
+            <span class="ayah">
+              الَّذِي عَلَّمَ بِالْقَلَمِ ﴿٤﴾
+            </span>
+            <span class="ayah">
+              عَلَّمَ الْإِنْسَانَ مَا لَمْ يَعْلَمْ ﴿٥﴾
+            </span>
+          </div>
+
+          <p class="quran-translation" lang="en">
+            “Read, O Prophet, in the Name of your Lord Who created—
+            created humans from a clinging clot.
+            Read! And your Lord is the Most Generous,
+            Who taught by the pen—
+            taught humanity what they knew not.”
+          </p>
+
+          <footer class="quran-ref">
+            Surah Al-‘Alaq · 96:1–5
+          </footer>
+        </blockquote>
+
+        <div class="row align-items-center g-5">
+          <div class="col-lg-8">
+            <p class="eyebrow reveal">HELLO, I AM</p>
+
+            <h1 class="reveal">
+              Aliya <em>Bibi.</em>
+            </h1>
+
+            <p class="hero-text hero-specialties reveal">
+              BSCS Graduate |
+              AI Enthusiast &amp; Aspiring AI Specialist |
+              Prompt Engineering |
+              Python &amp; Flask |
+              REST APIs |
+              NLP-Based AI Solutions |
+              OpenStack Keystone |
+              Ubuntu/Linux |
+              AI-Powered Video Creation
+            </p>
+
+            <div class="d-flex flex-wrap gap-3 reveal">
+              <a class="btn btn-primary-custom" href="#projects">
+                View my work <span aria-hidden="true">→</span>
+              </a>
+
+              <a
+                class="btn btn-outline-custom"
+                href="mailto:aliyabibi205@gmail.com"
+              >
+                Get in touch
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 d-none d-lg-block">
+            <div class="hero-card reveal">
+              <p>Currently exploring</p>
+
+              <strong>
+                AI, Web Development,<br>
+                Data Science &amp;<br>
+                AI Video Creation
+              </strong>
+
+              <div class="card-line"></div>
+
+              <small>Based in Gujar Khan, Pakistan</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="row g-5 align-items-center">
+
+          <div class="col-lg-5 reveal">
+            <p class="eyebrow">01 — ABOUT ME</p>
+            <h2>A blend of technology, leadership &amp; creativity.</h2>
+          </div>
+
+          <div class="col-lg-7 reveal">
+            <div class="about-summary">
+
+              <p class="lead-copy">
+                Computer Science graduate passionate about AI,
+                software development, and practical digital solutions.
+              </p>
+
+              <p>
+                <strong>Technical Projects:</strong>
+                OpenStack Keystone Identity Management,
+                NLP-Based AI School Helpdesk,
+                Aitmad Rides (Taxi Service Platform).
+              </p>
+
+              <p>
+                <strong>Programming &amp; AI:</strong>
+                Python, Flask, REST APIs, NLP, Prompt Engineering.
+              </p>
+
+              <p>
+                <strong>Professional Experience:</strong>
+                Junior Accountant, Education Administration,
+                Customer Support.
+              </p>
+
+              <p>
+                <strong>Office Skills:</strong>
+                Data Entry, Record Management, Documentation,
+                Administration.
+              </p>
+
+              <p>
+                <strong>AI Content Creation:</strong>
+                Promotional Videos, Business Ads, AI Voiceovers,
+                Captions, Social Media Content.
+              </p>
+
+            </div>
+
+            <div class="quick-facts mt-4">
+              <div>
+                <strong>2025</strong>
+                <span>BSCS Graduate</span>
+              </div>
+              <div>
+                <strong>3.07</strong>
+                <span>CGPA / 4.00</span>
+              </div>
+              <div>
+                <strong>5 yrs</strong>
+                <span>Education Experience</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section section-dark">
+      <div class="container">
+        <p class="eyebrow light reveal">02 — SKILLS</p>
+        <h2 class="text-white reveal">Tools I work with.</h2>
+
+        <div class="row g-3 mt-3">
+
+          <div class="col-md-6 col-lg-3 reveal">
+            <div class="skill-card">
+              <div class="skill-num">01</div>
+              <h3>Programming</h3>
+              <p>Python, C, C++, HTML, CSS</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 reveal">
+            <div class="skill-card">
+              <div class="skill-num">02</div>
+              <h3>Web &amp; APIs</h3>
+              <p>Flask, REST APIs, API Integration, Bootstrap</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 reveal">
+            <div class="skill-card">
+              <div class="skill-num">03</div>
+              <h3>Systems</h3>
+              <p>
+                OpenStack Keystone, Ubuntu/Linux,
+                Oracle VirtualBox
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 reveal">
+            <div class="skill-card">
+              <div class="skill-num">04</div>
+              <h3>AI &amp; Prompting</h3>
+              <p>
+                NLP, Text Classification, Conversational AI,
+                Prompt Engineering
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 reveal">
+            <div class="skill-card">
+              <div class="skill-num">05</div>
+              <h3>AI Video Creation</h3>
+              <p>
+                Google Flow, Google AI Studio, CapCut,
+                TikTok, Synthesia, ElevenLabs
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 reveal">
+            <div class="skill-card">
+              <div class="skill-num">06</div>
+              <h3>Office &amp; Records</h3>
+              <p>
+                MS Office, Excel, Word, PowerPoint,
+                InPage, Data Entry, Record Management
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 reveal">
+            <div class="skill-card">
+              <div class="skill-num">07</div>
+              <h3>Customer Support</h3>
+              <p>
+                Customer Queries, Booking Coordination,
+                Dispatch Support, English Communication
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 reveal">
+            <div class="skill-card">
+              <div class="skill-num">08</div>
+              <h3>Professional Skills</h3>
+              <p>
+                Communication, Team Coordination, Documentation,
+                Problem Solving, Administration
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="container">
+
+        <div
+          class="d-flex justify-content-between align-items-end flex-wrap gap-3"
+        >
+          <div>
+            <p class="eyebrow reveal">03 — PROJECTS</p>
+            <h2 class="reveal">Selected work.</h2>
+          </div>
+
+          <a
+            class="text-link reveal"
+            href="https://github.com/aliyabibi205-sys"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View GitHub ↗
+          </a>
+        </div>
+
+        <!-- OPENSTACK PROJECT -->
+        <article class="project-card mt-4 reveal">
+          <div class="project-visual">
+            <div class="terminal">
+              <div class="terminal-top">
+                <i></i><i></i><i></i>
+              </div>
+
+              <p><span>$</span> openstack identity</p>
+              <p class="muted">Managing users, roles &amp; projects</p>
+              <div class="terminal-bar"></div>
+              <p class="success">✓ Keystone service active</p>
+            </div>
+          </div>
+
+          <div class="project-content">
+            <span class="project-label">FEATURED PROJECT</span>
+
+            <h3>IDMUI — Identity Management User Interface</h3>
+
+            <p>
+              A Flask-based interface for OpenStack Keystone that helps
+              manage identity and access workflows through a web
+              dashboard rather than complex command-line steps.
+            </p>
+
+            <ul>
+              <li>
+                Configured and ran the project on Ubuntu using
+                Oracle VirtualBox.
+              </li>
+              <li>
+                Worked with Keystone REST APIs for user, role,
+                and project management.
+              </li>
+              <li>
+                Designed for API-based integration with other systems.
+              </li>
+            </ul>
+
+            <div class="tags">
+              <span>Python</span>
+              <span>Flask</span>
+              <span>REST API</span>
+              <span>OpenStack</span>
+              <span>Ubuntu</span>
+            </div>
+
+            <a
+              class="btn btn-primary-custom mt-4"
+              href="https://github.com/aliyabibi205-sys/idmui-openstack-project"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Explore repository <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- AI HELPDESK PROJECT -->
+        <article class="project-card mt-4 reveal">
+
+          <div class="project-media">
+            <img
+              src="https://uwt-public.s3.us-east-1.amazonaws.com/2025/08/helpdesk-software-guide.png"
+              alt="Illustrative helpdesk software image"
+              loading="lazy"
+              decoding="async"
+            >
+          </div>
+
+          <div class="project-content">
+            <span class="project-label">AI PROJECT</span>
+            <h3>NLP-Based AI School Helpdesk</h3>
+
+            <p>
+              A school helpdesk project designed to assist with common
+              student and parent queries through a conversational interface.
+            </p>
+
+            <ul>
+              <li>
+                Uses NLP-based query classification to match questions
+                with relevant responses.
+              </li>
+              <li>
+                Provides a chat interface for common questions about
+                admissions, fees, timetables, and exams.
+              </li>
+              <li>
+                Designed to support school staff by handling
+                repetitive inquiries.
+              </li>
+            </ul>
+
+            <div class="tags">
+              <span>Python</span>
+              <span>NLP</span>
+              <span>Chatbot</span>
+              <span>Flask</span>
+            </div>
+
+            <p class="project-note mt-3 mb-0">
+              Illustrative image; not a screenshot of the project.
+            </p>
+
+            <a
+              class="btn btn-primary-custom mt-4"
+              href="https://claude.ai/artifact/Ch7V72UZLiukcdgPXtYyXg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View AI System <span aria-hidden="true">→</span>
+            </a>
+          </div>
+
+        </article>
+
+        <!-- AITMAD RIDES PROJECT -->
+        <article class="project-card mt-4 reveal">
+
+          <div class="project-media">
+
+            <!--
+              Temporary brand placeholder.
+              Replace this block with the actual Aitmad Rides logo
+              when the logo image file or URL is available.
+            -->
+            <div
+              class="aitmad-brand-preview"
+              aria-label="Aitmad Rides temporary brand placeholder"
+            >
+              <div class="aitmad-monogram" aria-hidden="true">AR</div>
+              <h3>Aitmad Rides</h3>
+              <p>Taxi Service Platform Concept</p>
+            </div>
+
+          </div>
+
+          <div class="project-content">
+            <span class="project-label">AI-ASSISTED WEB PROTOTYPE</span>
+            <h3>Aitmad Rides — Taxi Service Platform</h3>
+
+            <p>
+              A taxi service platform concept developed with Claude
+              and presented as an interactive Claude artifact.
+              The project combines a website prototype with presentation
+              materials and promotional video and image ads.
+            </p>
+
+            <ul>
+              <li>
+                Developed the website concept through an
+                AI-assisted workflow with Claude.
+              </li>
+              <li>
+                Prepared presentation materials to communicate
+                the project idea.
+              </li>
+              <li>
+                Created video and image advertisements as
+                supporting promotional content.
+              </li>
+            </ul>
+
+            <div class="tags">
+              <span>Claude Artifact</span>
+              <span>AI-Assisted Development</span>
+              <span>Taxi Service Concept</span>
+              <span>Presentation</span>
+              <span>Promotional Content</span>
+            </div>
+
+            <a
+              class="btn btn-primary-custom mt-4"
+              href="https://claude.ai/artifact/SjpLqGUDiVLsCXakbSaHFS"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Prototype <span aria-hidden="true">↗</span>
+            </a>
+
+            <p class="project-note mt-3 mb-0">
+              Opens on Claude. This is a project prototype,
+              not a live commercial taxi-booking service.
+            </p>
+          </div>
+
+        </article>
+
+      </div>
+    </section>
+
+    <!-- AI ADVERTISING -->
+    <section id="ai-ads" class="section section-tint">
+      <div class="container">
+
+        <p class="eyebrow reveal">04 — AI VIDEO ADVERTISING</p>
+        <h2 class="reveal">Creative content for business promotion.</h2>
+
+        <div class="business-ads-card mt-4 reveal">
+          <span class="project-label">PROMOTIONAL CONTENT</span>
+          <h3>Business Promotional Video Ads</h3>
+
+          <p class="lead-copy mt-3">
+            I create AI-powered promotional videos for businesses
+            and services, combining creative concepts, AI-generated
+            visuals, editing, voiceovers, captions, and social media
+            content.
+          </p>
+
+          <p>
+            My creative toolkit includes Google Flow, Google AI Studio,
+            CapCut, TikTok, and Synthesia, with ElevenLabs for
+            AI voiceovers. Explore the sample business ads below.
+          </p>
+
+          <button
+            class="ads-toggle-btn mt-2"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#adsList"
+            aria-expanded="false"
+            aria-controls="adsList"
+          >
+            View Ads
+            <span class="toggle-arrow" aria-hidden="true">↓</span>
+          </button>
+
+          <div class="collapse" id="adsList">
+            <div class="pt-4">
+              <ol class="video-list">
+
+                <li>
+                  <a
+                    class="video-list-item"
+                    href="https://youtube.com/shorts/pNlrHH4RD0k?si=pDhPDIDSiJWahe8M"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span class="sample-label">SAMPLE / CONCEPT AD</span>
+                    <h4>1. Bakery Business Promotional Ad</h4>
+                    <p>
+                      A sample promotional video showcasing a bakery
+                      business through AI-assisted creative content.
+                      Presented as a portfolio sample, not a claimed
+                      paid client campaign.
+                    </p>
+                    <span class="youtube-link-label">
+                      Watch on YouTube ↗
+                    </span>
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    class="video-list-item"
+                    href="https://youtu.be/1RmVFuHKNUQ?si=ObTFviZ6uoCY9r1Q"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span class="sample-label">SAMPLE / CONCEPT AD</span>
+                    <h4>2. UK Taxi Service Promotional Ad</h4>
+                    <p>
+                      A sample business advertisement promoting a
+                      UK-based taxi service. Presented to demonstrate
+                      AI-assisted promotional video creation.
+                    </p>
+                    <span class="youtube-link-label">
+                      Watch on YouTube ↗
+                    </span>
+                  </a>
+                </li>
+
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-5 reveal">
+          <a
+            class="btn btn-primary-custom"
+            href="mailto:aliyabibi205@gmail.com?subject=AI%20Video%20Ad%20Project"
+          >
+            Hire me for AI video ads
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <div class="container">
+
+        <p class="eyebrow reveal">05 — EXPERIENCE</p>
+        <h2 class="reveal">Professional journey.</h2>
+
+        <div class="timeline mt-4">
+
+          <div class="timeline-item reveal">
+            <div class="timeline-date">
+              November 2026 — Present
+            </div>
+
+            <div>
+              <h3>Junior Clerk</h3>
+              <h4>Technical Training Institute</h4>
+
+              <p>
+                Support daily office operations through data entry,
+                documentation, record management, and administrative
+                assistance.
+              </p>
+
+              <ul class="experience-responsibilities">
+                <li>Maintain and update office and digital records.</li>
+                <li>Prepare and organize documents and routine files.</li>
+                <li>
+                  Use office software to support accurate
+                  documentation and data handling.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-date">
+              January 2026 — May 2026
+            </div>
+
+            <div>
+              <h3>International Customer Support Agent</h3>
+              <h4>Ash Cars, UK — Remote</h4>
+
+              <p>
+                Completed a five-month customer-support contract
+                in an English-speaking taxi-service environment.
+              </p>
+
+              <ul class="experience-responsibilities">
+                <li>Handled customer queries and taxi bookings.</li>
+                <li>Supported booking and dispatch coordination.</li>
+                <li>
+                  Maintained clear communication while assisting
+                  customers with service requests.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-date">
+              Role ended October 2026
+            </div>
+
+            <div>
+              <h3>Vice Principal</h3>
+              <h4>
+                Millat Secondary School for Girls, Gujar Khan
+              </h4>
+
+              <p>
+                Served as Vice Principal for three years within
+                five years of overall experience at the school.
+              </p>
+
+              <ul class="experience-responsibilities">
+                <li>
+                  Coordinated academic and administrative activities.
+                </li>
+                <li>
+                  Supported staff coordination and day-to-day
+                  school operations.
+                </li>
+                <li>
+                  Communicated with staff, students, and parents.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-date">
+              During school employment · Ended October 2026
+            </div>
+
+            <div>
+              <h3>Data Entry &amp; Records Responsibilities</h3>
+              <h4>
+                Millat Secondary School for Girls, Gujar Khan
+              </h4>
+
+              <p>
+                Additional responsibilities performed alongside
+                school duties, shown separately to highlight
+                practical data-handling and office skills.
+              </p>
+
+              <ul class="experience-responsibilities">
+                <li>
+                  Entered and updated student and office information.
+                </li>
+                <li>
+                  Maintained digital records and organized documentation.
+                </li>
+                <li>
+                  Prepared spreadsheets and documents using
+                  MS Excel, Word, and InPage.
+                </li>
+                <li>
+                  Supported routine record keeping and
+                  administrative documentation.
+                </li>
+              </ul>
+
+              <p class="project-note">
+                These were additional responsibilities at the same
+                school, not a separate employment period.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="section section-tint">
+      <div class="container">
+        <div class="row g-4">
+
+          <div class="col-lg-7 reveal">
+            <p class="eyebrow">06 — EDUCATION &amp; CERTIFICATIONS</p>
+            <h2>Always learning.</h2>
+
+            <div class="education-box">
+              <h3>BS Computer Science</h3>
+              <p>
+                Virtual University of Pakistan · 2025 ·
+                CGPA 3.07 / 4.00
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-5 reveal">
+            <div class="cert-box">
+              <h3>Courses &amp; certificates</h3>
+
+              <ul>
+                <li>Cyber Security Threats</li>
+                <li>Excel Formulas</li>
+                <li>Learn Python</li>
+                <li>
+                  Full Stack Web Development — DigiPakistan
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact-section">
+      <div class="container text-center reveal">
+
+        <p class="eyebrow light">07 — CONTACT</p>
+
+        <h2>
+          Let's build something<br>
+          <em>useful</em> together.
+        </h2>
+
+        <p>
+          I am open to opportunities in IT, AI-assisted development,
+          web development, customer support, and administration,
+          as well as paid AI video advertising and promotional
+          content projects.
+        </p>
+
+        <a
+          class="email-link"
+          href="mailto:aliyabibi205@gmail.com"
+        >
+          aliyabibi205@gmail.com
+        </a>
+
+        <div class="socials">
+          <a
+            href="https://www.linkedin.com/in/aliya-bibi-13034b405"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn ↗
+          </a>
+
+          <a
+            href="https://github.com/aliyabibi205-sys"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub ↗
+          </a>
+
+          <a href="tel:+923045234864">
+            Call me ↗
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container d-flex justify-content-between flex-wrap gap-2">
+      <span>© 2026 Aliya Bibi</span>
+      <span>Designed with intention.</span>
+    </div>
+  </footer>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  ></script>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
